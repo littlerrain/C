@@ -7,7 +7,8 @@ int main()
     //output();
     //inout();
     //io_anychar();
-    io_anychar_1();
+    //io_anychar_1();
+    io_anychar_2();
 }
 int input()
 {
@@ -71,4 +72,13 @@ int io_anychar_1()
     for(i=0;i<=x;i++){
     putchar(n[i]);
     }
+}
+
+
+//ÖÕ¼«ºÚ¿Æ¼¼O(¡É_¡É)O¹þ¹þ~
+int io_anychar_2()
+{
+    printf("Enter chars:\n");
+    for( ;(c=getchar())!='\n';)
+        printf("%c",c);
 }
