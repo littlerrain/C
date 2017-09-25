@@ -49,36 +49,21 @@ int main()
 
 //判断给出的数是否为素数
 
+#include<stdio.h>
+#include<math.h>
 int main()
 {
-    printf("Please input a number:");
-    int num;
-    scanf("%d",&num);
-    if(num<=1) printf("illegal entry:which input must bigger than 1!%c",'\a');//警报
-    else if(num==2||num==3) printf("The number %d is a prime number.\n",num);
-    else
-    {
-        if(num%2==0||num%3==0) printf("The number %d isn't a prime number.\n",num);
-        else printf("The number %d is a prime number.\n",num);
+    int n,m,i;
+    printf("Enter num:");
+    scanf("%d",&n);
+    m=sqrt(n);
+    for(i=2;i<=m;i++){
+        if(n%i==0) break;
     }
+    if(i<=m) printf("Not a prime number!");
+    else printf("A prime number");
 }
 
 
 
 //扩展:判断给出的一组数中的素数，并打印出来.
-
-int main()
-{
-    int num;
-    for(num=2;num<=100;num++){
-        if(num<=1){}
-        else if(num==2||num==3) printf("%d\n",num);
-        else
-        {
-            if(num%2==0||num%3==0){}
-            else{
-            printf("%d\n",num);
-            }
-        }
-    }
-}
