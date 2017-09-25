@@ -57,6 +57,10 @@ int main()
     printf("Enter num:");
     scanf("%d",&n);
     m=sqrt(n);
+    if(n<=1){
+        printf("Enter Error!");
+        return 0;
+    }
     for(i=2;i<=m;i++){
         if(n%i==0) break;
     }
